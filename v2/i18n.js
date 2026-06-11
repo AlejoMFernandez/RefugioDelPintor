@@ -127,8 +127,8 @@ const I18N = {
     },
     breakfast: {
       kicker: 'El desayuno',
-      heading: 'Empezar el día sin apuros.',
-      body: 'Todas las estadías incluyen desayuno buffet, continental o americano, servido cada mañana. Es parte de la experiencia: algo casero, bien hecho, antes de salir a recorrer.'
+      heading: 'Desayuno incluido',
+      body: 'Buffet casero cada mañana, incluido en la estadía.'
     },
     gallery: {
       kicker: 'Galería',
@@ -326,8 +326,8 @@ const I18N = {
     },
     breakfast: {
       kicker: 'Breakfast',
-      heading: 'Start the day slowly.',
-      body: 'Every stay includes a buffet breakfast, continental or American, served each morning. It is part of the experience: something homemade, well made, before heading out to explore.'
+      heading: 'Breakfast included',
+      body: 'Homemade buffet every morning, included with your stay.'
     },
     gallery: {
       kicker: 'Gallery',

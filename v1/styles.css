@@ -831,8 +831,12 @@ strong { font-weight: 600; }
 }
 
 .services__item--highlight {
-  border-top: 2px solid var(--terracotta);
-  padding-top: calc(var(--space-5) - 1px);
+  grid-column: 1 / -1;
+  border: 1px solid var(--terracotta);
+  border-radius: var(--radius);
+  padding: var(--space-4) var(--space-5);
+  background: oklch(0.96 0.015 45 / 0.5);
+  margin-top: var(--space-4);
 }
 
 /* ===== Gallery (CSS multicolumn masonry) ===== */
