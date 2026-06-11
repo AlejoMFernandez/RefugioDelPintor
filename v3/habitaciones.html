@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es-AR" data-lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#F7F3EA">
+  <title>Habitaciones · Refugio del Pintor</title>
+  <meta name="description" content="Trece habitaciones de adobe, piedra y madera en Tilcara. Doble, triple y familiar, en dos plantas con vistas a la Quebrada o al patio interior.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=Geist:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="rooms">
+
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="index.html" aria-label="Refugio del Pintor">
+      <span class="brand__mark"><em>del</em> Pintor</span>
+      <span class="brand__sub" data-i18n="header.brandSubline">Refugio de Pueblo</span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="habitaciones.html" data-nav="rooms" data-i18n="nav.rooms">Habitaciones</a>
+      <a href="galeria.html" data-nav="gallery" data-i18n="nav.gallery">Galería</a>
+      <a href="reservar.html" data-nav="booking" data-i18n="nav.book">Reservar</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="sound-toggle" type="button" aria-pressed="false" data-i18n-aria-label="header.soundOnAria" aria-label="Activar sonido ambiente">
+        <svg class="icon icon--sound-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M11 5 6 9H2v6h4l5 4z"/>
+          <line x1="22" y1="9" x2="16" y2="15"/>
+          <line x1="16" y1="9" x2="22" y2="15"/>
+        </svg>
+        <svg class="icon icon--sound-on" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M11 5 6 9H2v6h4l5 4z"/>
+          <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+        </svg>
+      </button>
+      <button class="icon-button lang-toggle" id="lang-toggle" type="button" data-i18n-aria-label="header.langSwitchAria" aria-label="Cambiar idioma">
+        <span data-i18n="header.langSwitch">EN</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="main" id="main">
+  <section class="page">
+    <div class="page__inner">
+      <p class="page-kicker" data-i18n="rooms.kicker">Las habitaciones</p>
+      <h1 class="page-title" data-i18n="rooms.heading">Trece habitaciones, en dos plantas.</h1>
+      <p class="page-lead" data-i18n="rooms.lead">Cada una con carácter propio. Al reservar podés indicar tu preferencia de planta, sujeto a disponibilidad.</p>
+
+      <div class="rooms-grid">
+        <button class="room-card" type="button" data-room-open="double" aria-label="Habitación Doble. Ver detalle" data-reveal>
+          <figure class="room-card__figure">
+            <img src="../img/habitacion doble planta alta horizontal.jpeg"
+                 data-i18n-alt="alt.roomDouble"
+                 alt="Habitación doble en planta alta con vista a la Quebrada"
+                 width="1086" height="724" loading="lazy" decoding="async">
+          </figure>
+          <div class="room-card__body">
+            <p class="room-card__count" data-i18n="rooms.double.countLabel">9 disponibles</p>
+            <h3 class="room-card__name" data-i18n="rooms.double.name">Doble</h3>
+            <p class="room-card__capacity" data-i18n="rooms.double.capacity">Para 2 personas</p>
+            <p class="room-card__body-text" data-i18n="rooms.double.body">Cama matrimonial o twin, con sommier Queen o King.</p>
+            <span class="room-card__cta">
+              <span data-i18n="rooms.detailCta">Ver detalle</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+            </span>
+          </div>
+        </button>
+
+        <button class="room-card" type="button" data-room-open="triple" aria-label="Habitación Triple. Ver detalle" data-reveal>
+          <figure class="room-card__figure">
+            <img src="../img/habitacion triple cama vertical.jpeg"
+                 data-i18n-alt="alt.roomTriple"
+                 alt="Habitación triple con paredes ocre y cubrecamas de telar andino"
+                 width="724" height="1086" loading="lazy" decoding="async">
+          </figure>
+          <div class="room-card__body">
+            <p class="room-card__count" data-i18n="rooms.triple.countLabel">3 disponibles</p>
+            <h3 class="room-card__name" data-i18n="rooms.triple.name">Triple</h3>
+            <p class="room-card__capacity" data-i18n="rooms.triple.capacity">Para 3 personas</p>
+            <p class="room-card__body-text" data-i18n="rooms.triple.body">Tres camas individuales con sommier.</p>
+            <span class="room-card__cta">
+              <span data-i18n="rooms.detailCta">Ver detalle</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+            </span>
+          </div>
+        </button>
+
+        <button class="room-card" type="button" data-room-open="family" aria-label="Habitación Familiar. Ver detalle" data-reveal>
+          <figure class="room-card__figure">
+            <img src="../img/hacitacion planta alta horizontal.jpeg"
+                 data-i18n-alt="alt.roomFamily"
+                 alt="Cama con almohadón andino y vista a los cerros de Tilcara"
+                 width="1086" height="724" loading="lazy" decoding="async">
+          </figure>
+          <div class="room-card__body">
+            <p class="room-card__count" data-i18n="rooms.family.countLabel">1 disponible</p>
+            <h3 class="room-card__name" data-i18n="rooms.family.name">Familiar</h3>
+            <p class="room-card__capacity" data-i18n="rooms.family.capacity">Hasta 5 personas</p>
+            <p class="room-card__body-text" data-i18n="rooms.family.body">Dos espacios intercomunicados.</p>
+            <span class="room-card__cta">
+              <span data-i18n="rooms.detailCta">Ver detalle</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+            </span>
+          </div>
+        </button>
+      </div>
+
+      <div class="floors" data-reveal>
+        <h3 class="floors__heading" data-i18n="rooms.floorsHeading">Plantas y vistas</h3>
+        <div class="floors__grid">
+          <div>
+            <p class="floors__label" data-i18n="rooms.upperLabel">Planta alta</p>
+            <p class="floors__body" data-i18n="rooms.upperBody">Mira hacia la Quebrada. Cerros, cielo abierto, atardeceres que cambian de color cada minuto.</p>
+          </div>
+          <div>
+            <p class="floors__label" data-i18n="rooms.lowerLabel">Planta baja</p>
+            <p class="floors__body" data-i18n="rooms.lowerBody">Da al patio interior. Más resguardada, verde, silenciosa.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="services" data-reveal>
+        <h3 class="services__heading" data-i18n="services.heading">Lo necesario, bien hecho.</h3>
+        <ul class="services__list" id="services-list" role="list"></ul>
+      </div>
+
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div>
+      <p class="site-footer__tagline" data-i18n="footer.tagline">No es un hotel. Es un refugio.</p>
+    </div>
+    <div class="site-footer__col">
+      <h4 data-i18n="footer.contactHeading">Contacto</h4>
+      <a id="footer-whatsapp" href="#" data-i18n="footer.whatsappDisplay">+54 9 3884 38-5736</a>
+      <a href="tel:+543884385736" data-i18n="footer.phoneDisplay">+54 388 438-5736</a>
+      <a href="https://instagram.com/delpintorrefugio" target="_blank" rel="noopener noreferrer" data-i18n="footer.instagramHandle">@delpintorrefugio</a>
+    </div>
+    <div class="site-footer__col">
+      <h4 data-i18n="footer.addressLabel">Dirección</h4>
+      <p data-i18n="footer.address">Alverro 660, Y4624 Tilcara, Jujuy, Argentina</p>
+    </div>
+  </div>
+  <div class="site-footer__bottom">
+    <p data-i18n="footer.copyright">© Refugio del Pintor · Tilcara, Quebrada de Humahuaca</p>
+    <p class="site-footer__credit" data-i18n="footer.creditLine">Hecho con respeto por el paisaje.</p>
+  </div>
+</footer>
+
+<!-- Room detail modal -->
+<div class="room-modal" id="room-modal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="room-modal-name">
+  <div class="room-modal__backdrop" data-close-modal></div>
+  <div class="room-modal__panel" role="document">
+    <button class="room-modal__close" type="button" data-close-modal data-i18n-aria-label="rooms.modal.closeLabel" aria-label="Cerrar">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M18 6 6 18"/>
+        <path d="m6 6 12 12"/>
+      </svg>
+    </button>
+    <figure class="room-modal__media">
+      <img id="room-modal-img" src="" alt="" loading="lazy">
+    </figure>
+    <div class="room-modal__content">
+      <p class="room-modal__count" id="room-modal-count"></p>
+      <h2 class="room-modal__name" id="room-modal-name"></h2>
+      <p class="room-modal__capacity" id="room-modal-capacity"></p>
+      <p class="room-modal__body" id="room-modal-body"></p>
+
+      <dl class="room-modal__specs">
+        <div class="room-modal__spec">
+          <dt data-i18n="rooms.modal.bathLabel">Baño</dt>
+          <dd id="room-modal-bath"></dd>
+        </div>
+        <div class="room-modal__spec">
+          <dt data-i18n="rooms.modal.viewLabel">Vista</dt>
+          <dd id="room-modal-view"></dd>
+        </div>
+      </dl>
+
+      <div class="room-modal__amenities">
+        <h3 data-i18n="rooms.modal.amenitiesLabel">Incluye</h3>
+        <ul id="room-modal-amenities"></ul>
+      </div>
+
+      <a class="cta cta--lg room-modal__cta" id="room-modal-cta" href="#" target="_blank" rel="noopener noreferrer">
+        <span data-i18n="rooms.modal.bookCta">Reservar esta habitación</span>
+        <span class="cta__icon" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg>
+        </span>
+      </a>
+      <p class="room-modal__note" data-i18n="rooms.modal.note">El mensaje de WhatsApp ya viene con los datos de esta habitación.</p>
+    </div>
+  </div>
+</div>
+
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

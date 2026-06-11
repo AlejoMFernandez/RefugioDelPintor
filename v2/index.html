@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es-AR" data-lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#1a1410">
+  <title data-i18n="meta.title">Refugio del Pintor · Hospedaje en Tilcara, Quebrada de Humahuaca</title>
+  <meta name="description" data-i18n-content="meta.description" content="No es un hotel. Es un refugio.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=Geist:wght@300..700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer crossorigin=""></script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#scene-essence">Saltar al contenido</a>
+
+<!-- Floating brand (top-left) -->
+<a class="brand" href="#scene-hero" id="brand">
+  <span class="brand__mark"><em>del</em> Pintor</span>
+  <span class="brand__sub" data-i18n="header.brandSubline">Refugio de Pueblo</span>
+</a>
+
+<!-- Floating controls (top-right) -->
+<div class="controls" id="controls">
+  <div class="controls__pill">
+    <button class="icon-button" id="sound-toggle" type="button" aria-pressed="false" data-i18n-aria-label="header.soundOnAria" aria-label="Activar sonido ambiente">
+      <svg class="icon icon--sound-off" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M11 5 6 9H2v6h4l5 4z"/>
+        <line x1="22" y1="9" x2="16" y2="15"/>
+        <line x1="16" y1="9" x2="22" y2="15"/>
+      </svg>
+      <svg class="icon icon--sound-on" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M11 5 6 9H2v6h4l5 4z"/>
+        <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+        <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+      </svg>
+    </button>
+    <button class="icon-button lang-toggle" id="lang-toggle" type="button" data-i18n-aria-label="header.langSwitchAria" aria-label="Cambiar idioma">
+      <span data-i18n="header.langSwitch">EN</span>
+    </button>
+  </div>
+  <a class="cta cta--small" id="header-cta" href="#scene-booking" data-i18n="header.bookShort">Reservar</a>
+</div>
+
+<!-- Scene progress dots (right edge) MODIFICAR JUNTO ORDEN -->
+<aside class="scene-nav" id="scene-nav" aria-label="Navegación por escenas">
+  <ol class="scene-nav__list">
+    <li><a href="#scene-hero" data-scene-target="scene-hero" aria-label="Inicio"></a></li>
+    <li><a href="#scene-essence" data-scene-target="scene-essence" aria-label="Esencia"></a></li>
+    <li><a href="#scene-rooms" data-scene-target="scene-rooms" aria-label="Habitaciones"></a></li>
+    <li><a href="#scene-services" data-scene-target="scene-services" aria-label="Servicios"></a></li>
+    <li><a href="#scene-place" data-scene-target="scene-place" aria-label="Tilcara"></a></li>
+    <li><a href="#scene-gallery" data-scene-target="scene-gallery" aria-label="Galería"></a></li>
+    <li><a href="#scene-reviews" data-scene-target="scene-reviews" aria-label="Voces"></a></li>
+    <li><a href="#scene-origin" data-scene-target="scene-origin" aria-label="Ricardo"></a></li>
+    <li><a href="#scene-location" data-scene-target="scene-location" aria-label="Ubicación"></a></li>
+    <li><a href="#scene-booking" data-scene-target="scene-booking" aria-label="Reservar"></a></li>
+  </ol>
+</aside>
+
+<main class="scroll-container">
+
+  <!-- 1. HERO -->
+  <section class="scene scene--hero" id="scene-hero" data-scene="hero" aria-labelledby="hero-title">
+    <div class="scene__media scene__media--kenburns">
+      <img src="../img/exterior con mesaysilla y vista de otro lado mas arenoso y rustico vertical.jpeg"
+           data-i18n-alt="alt.patio"
+           alt="Patio interior con mesa de hierro y silla de mimbre frente a paredes de adobe"
+           loading="eager" fetchpriority="high" decoding="async">
+    </div>
+    <div class="scene__veil scene__veil--hero" aria-hidden="true"></div>
+
+    <div class="scene__content scene__content--bottom-left">
+      <p class="hero__eyebrow" data-i18n="hero.eyebrow">Tilcara · Quebrada de Humahuaca</p>
+      <h1 class="hero__title" id="hero-title">
+        <span class="hero__line" data-i18n="hero.tagline">No es un hotel.</span>
+        <span class="hero__line hero__line--em" data-i18n="hero.taglineEm">Es un refugio.</span>
+      </h1>
+      <p class="hero__subtitle" data-i18n="hero.subtitle">Trece habitaciones de adobe, piedra y madera, al pie de la Quebrada. Recibidos por quien las construyó.</p>
+    </div>
+
+    <a class="scene__scroll" href="#scene-essence" aria-label="Bajar a Esencia">
+      <span data-i18n="hero.scrollHint">Bajar</span>
+      <svg width="12" height="20" viewBox="0 0 12 20" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2v15"/><path d="m2 13 4 4 4-4"/></svg>
+    </a>
+  </section>
+
+  <!-- 2. ESENCIA -->
+  <section class="scene scene--type" id="scene-essence" data-scene="essence" aria-labelledby="essence-h">
+    <div class="scene__content scene__content--center">
+      <p class="scene__kicker" data-i18n="essence.kicker">La esencia</p>
+      <h2 class="scene__heading scene__heading--xl" id="essence-h" data-i18n="essence.heading">Un lugar donde parar, respirar, y volver a lo esencial.</h2>
+      <p class="scene__body scene__body--lead" data-i18n="essence.lead">Refugio del Pintor nació de una convicción simple: la hospitalidad genuina no necesita artificios.</p>
+    </div>
+  </section>
+
+  <!-- HABITACIONES (3-col grid + modal) -->
+  <section class="scene scene--rooms" id="scene-rooms" data-scene="rooms" aria-labelledby="rooms-h">
+    <div class="scene__content scene__content--rooms">
+      <p class="scene__kicker" data-i18n="rooms.kicker">Las habitaciones</p>
+      <h2 class="scene__heading scene__heading--small" id="rooms-h" data-i18n="rooms.heading">Trece habitaciones, en dos plantas.</h2>
+      <p class="scene__body scene__body--lead" data-i18n="rooms.lead">Cada una con carácter propio. Al reservar podés indicar tu preferencia de planta, sujeto a disponibilidad.</p>
+
+      <div class="rooms-grid">
+        <button class="room-card" type="button" data-room-open="double" aria-label="Habitación Doble. Ver detalle">
+          <figure class="room-card__figure">
+            <img src="../img/habitacion doble planta alta horizontal.jpeg"
+                 data-i18n-alt="alt.roomDouble"
+                 alt="Habitación doble en planta alta con vista a la Quebrada al atardecer"
+                 loading="lazy" decoding="async">
+          </figure>
+          <div class="room-card__body">
+            <p class="room-card__count" data-i18n="rooms.double.countLabel">9 disponibles</p>
+            <h3 class="room-card__name" data-i18n="rooms.double.name">Doble</h3>
+            <p class="room-card__capacity" data-i18n="rooms.double.capacity">Para 2 personas</p>
+            <p class="room-card__body-text" data-i18n="rooms.double.body">Cama matrimonial o twin, sommier Queen o King.</p>
+            <span class="room-card__cta">
+              <span data-i18n="rooms.detailCta">Ver detalle</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+            </span>
+          </div>
+        </button>
+
+        <button class="room-card" type="button" data-room-open="triple" aria-label="Habitación Triple. Ver detalle">
+          <figure class="room-card__figure">
+            <img src="../img/habitacion triple cama vertical.jpeg"
+                 data-i18n-alt="alt.roomTriple"
+                 alt="Habitación triple con paredes ocre y cubrecamas de telar andino"
+                 loading="lazy" decoding="async">
+          </figure>
+          <div class="room-card__body">
+            <p class="room-card__count" data-i18n="rooms.triple.countLabel">3 disponibles</p>
+            <h3 class="room-card__name" data-i18n="rooms.triple.name">Triple</h3>
+            <p class="room-card__capacity" data-i18n="rooms.triple.capacity">Para 3 personas</p>
+            <p class="room-card__body-text" data-i18n="rooms.triple.body">Tres camas individuales con sommier.</p>
+            <span class="room-card__cta">
+              <span data-i18n="rooms.detailCta">Ver detalle</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+            </span>
+          </div>
+        </button>
+
+        <button class="room-card" type="button" data-room-open="family" aria-label="Habitación Familiar. Ver detalle">
+          <figure class="room-card__figure">
+            <img src="../img/hacitacion planta alta horizontal.jpeg"
+                 data-i18n-alt="alt.roomFamily"
+                 alt="Cama con almohadón andino y vista a los cerros de Tilcara"
+                 loading="lazy" decoding="async">
+          </figure>
+          <div class="room-card__body">
+            <p class="room-card__count" data-i18n="rooms.family.countLabel">1 disponible</p>
+            <h3 class="room-card__name" data-i18n="rooms.family.name">Familiar</h3>
+            <p class="room-card__capacity" data-i18n="rooms.family.capacity">Hasta 5 personas</p>
+            <p class="room-card__body-text" data-i18n="rooms.family.body">Dos espacios intercomunicados.</p>
+            <span class="room-card__cta">
+              <span data-i18n="rooms.detailCta">Ver detalle</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+            </span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </section>
+  
+  <!-- 3. ORIGEN -->
+  <section class="scene scene--split" id="scene-origin" data-scene="origin" aria-labelledby="origin-h">
+    <div class="scene__media scene__media--side">
+      <img src="../img/entrada con cartel refugiodelpintor vertical.jpeg"
+           data-i18n-alt="alt.hero"
+           alt="Entrada del Refugio del Pintor con el cartel tallado en madera"
+           loading="lazy" decoding="async">
+    </div>
+    <div class="scene__content scene__content--side">
+      <p class="scene__kicker" data-i18n="origin.kicker">El origen</p>
+      <h2 class="scene__heading" id="origin-h" data-i18n="origin.heading">Ricardo Mealla llegó cuando no había nadie.</h2>
+      <blockquote class="scene__quote">
+        <p data-i18n="origin.quote">Empecé cuando acá no había nadie. Creé algo natural, de raíz, sin modificar nada.</p>
+        <cite data-i18n="origin.quoteAttrib">Ricardo Mealla, anfitrión</cite>
+      </blockquote>
+      <p class="scene__body scene__body--small" data-i18n="origin.body1">Detrás del Refugio está Ricardo, uno de los iniciadores del turismo en Tilcara. Construyó este lugar con una filosofía clara: integrarse al entorno en vez de imponerse sobre él.</p>
+    </div>
+  </section>
+
+  <!-- 4. TILCARA -->
+  <section class="scene scene--cover" id="scene-place" data-scene="place" aria-labelledby="place-h">
+    <div class="scene__media scene__media--kenburns">
+      <img src="../img/exterior de adoquines y madera muy lindo vertical.jpeg"
+           data-i18n-alt="alt.exterior"
+           alt="Fachada en piedra y madera con la Quebrada de fondo"
+           loading="lazy" decoding="async">
+    </div>
+    <div class="scene__veil scene__veil--bottom" aria-hidden="true"></div>
+
+    <div class="scene__content scene__content--bottom-left">
+      <p class="scene__kicker" data-i18n="place.kicker">El lugar</p>
+      <h2 class="scene__heading" id="place-h" data-i18n="place.heading">Tilcara, corazón de la Quebrada.</h2>
+      <p class="scene__body" data-i18n="place.body1">El Refugio está en Alverro 660, a pasos del centro del pueblo, rodeado del paisaje de la Quebrada, Patrimonio UNESCO.</p>
+
+      <div class="nearby">
+        <p class="nearby__heading" data-i18n="place.nearbyHeading">A pasos del Refugio</p>
+        <ul class="nearby__list" id="nearby-list" role="list"></ul>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 8. SERVICIOS + DESAYUNO -->
+  <section class="scene scene--services" id="scene-services" data-scene="services" aria-labelledby="services-h">
+    <div class="scene__media scene__media--side">
+      <img src="../img/vista interior de mesas y sillas de madera con chimenea horizontal.jpeg"
+           data-i18n-alt="alt.diningRoom"
+           alt="Comedor con paredes ocre, salamandra y mesas de madera"
+           loading="lazy" decoding="async">
+    </div>
+    <div class="scene__veil scene__veil--side" aria-hidden="true"></div>
+
+    <div class="scene__content scene__content--side">
+      <p class="scene__kicker" data-i18n="services.kicker">Servicios</p>
+      <h2 class="scene__heading" id="services-h" data-i18n="services.heading">Lo necesario, bien hecho.</h2>
+      <ul class="services__list" id="services-list" role="list"></ul>
+
+    </div>
+  </section>
+
+  <!-- 9. GALERÍA -->
+  <section class="scene scene--gallery" id="scene-gallery" data-scene="gallery" aria-labelledby="gallery-h">
+    <div class="scene__media scene__media--mosaic">
+      <div class="gallery">
+        <figure class="gallery__item gallery__item--a">
+          <img src="../img/exterior con mesaysilla y vista de otro lado mas arenoso y rustico vertical.jpeg"
+               data-i18n-alt="alt.patio" alt="Patio" loading="lazy" decoding="async">
+        </figure>
+        <figure class="gallery__item gallery__item--b">
+          <img src="../img/vista interior con muebles de madera y paredes de adoquines vertical.jpeg"
+               data-i18n-alt="alt.interiorStone" alt="Sala interior" loading="lazy" decoding="async">
+        </figure>
+        <figure class="gallery__item gallery__item--c">
+          <img src="../img/habitacion triple cama vertical.jpeg"
+               data-i18n-alt="alt.roomTriple" alt="Triple" loading="lazy" decoding="async">
+        </figure>
+        <figure class="gallery__item gallery__item--d">
+          <img src="../img/hacitacion planta alta horizontal.jpeg"
+               data-i18n-alt="alt.roomFamily" alt="Familiar" loading="lazy" decoding="async">
+        </figure>
+        <figure class="gallery__item gallery__item--e">
+          <img src="../img/habitacion doble planta alta horizontal.jpeg"
+               data-i18n-alt="alt.roomDouble" alt="Doble" loading="lazy" decoding="async">
+        </figure>
+        <figure class="gallery__item gallery__item--f">
+          <img src="../img/exterior de adoquines y madera muy lindo vertical.jpeg"
+               data-i18n-alt="alt.exterior" alt="Fachada" loading="lazy" decoding="async">
+        </figure>
+      </div>
+    </div>
+    <div class="scene__content scene__content--corner">
+      <p class="scene__kicker" data-i18n="gallery.kicker">Galería</p>
+      <h2 class="scene__heading scene__heading--small" id="gallery-h" data-i18n="gallery.heading">El refugio en imágenes.</h2>
+    </div>
+  </section>
+
+  <!-- 10. VOCES / RESEÑAS -->
+  <section class="scene scene--reviews" id="scene-reviews" data-scene="reviews" aria-labelledby="reviews-h">
+    <div class="scene__content scene__content--center">
+      <p class="scene__kicker" data-i18n="reviews.kicker">Voces</p>
+      <h2 class="scene__heading scene__heading--small" id="reviews-h" data-i18n="reviews.heading">Lo que dicen los que ya volvieron.</h2>
+      <div class="reviews" id="reviews-list"></div>
+    </div>
+  </section>
+
+  <!-- 11. UBICACIÓN -->
+  <section class="scene scene--location" id="scene-location" data-scene="location" aria-labelledby="location-h">
+    <div class="scene__media scene__media--map" id="map" role="img" aria-label="Mapa del Refugio del Pintor en Tilcara"></div>
+    <div class="scene__content scene__content--floating">
+      <p class="scene__kicker" data-i18n="location.kicker">Cómo llegar</p>
+      <h2 class="scene__heading scene__heading--small" id="location-h" data-i18n="location.heading">Alverro 660, Tilcara.</h2>
+      <p class="scene__body scene__body--small" data-i18n="location.body">A pasos del centro y de la plaza principal.</p>
+      <a class="cta cta--ghost" href="https://www.google.com/maps/search/?api=1&query=Refugio+del+Pintor+Alverro+660+Tilcara+Jujuy" target="_blank" rel="noopener noreferrer">
+        <span data-i18n="location.mapCta">Abrir en Google Maps</span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- 12. RESERVA -->
+  <section class="scene scene--booking" id="scene-booking" data-scene="booking" aria-labelledby="booking-h">
+    <div class="scene__content scene__content--center">
+      <p class="scene__kicker" data-i18n="booking.kicker">Reservar</p>
+      <h2 class="scene__heading scene__heading--xl" id="booking-h" data-i18n="booking.heading">Sin plataformas. Sin comisiones. Por WhatsApp.</h2>
+      <p class="scene__body scene__body--lead" data-i18n="booking.body2">No es una limitación, es una decisión. Ricardo prefiere el trato personal.</p>
+      <a class="cta cta--primary cta--xl" id="booking-cta" href="#">
+        <span data-i18n="booking.cta">Escribir por WhatsApp</span>
+        <span class="cta__icon-wrap" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg>
+        </span>
+      </a>
+      <p class="booking__note" data-i18n="booking.note">Respuesta personal, en general dentro del día.</p>
+    </div>
+  </section>
+
+  <!-- 13. FOOTER MINI -->
+  <footer class="scene scene--footer" id="scene-footer" aria-labelledby="footer-h">
+    <div class="scene__content scene__content--center">
+      <p class="footer__tagline" data-i18n="footer.tagline">No es un hotel. Es un refugio.</p>
+      <div class="footer__cols">
+        <div class="footer__col">
+          <h3 id="footer-h" data-i18n="footer.contactHeading">Contacto</h3>
+          <a id="footer-whatsapp" href="#" data-i18n="footer.whatsappDisplay">+54 9 3884 38-5736</a>
+          <a href="tel:+543884385736" data-i18n="footer.phoneDisplay">+54 388 438-5736</a>
+          <a href="https://instagram.com/delpintorrefugio" target="_blank" rel="noopener noreferrer" data-i18n="footer.instagramHandle">@delpintorrefugio</a>
+        </div>
+        <div class="footer__col">
+          <p data-i18n="footer.address">Alverro 660, Y4624 Tilcara, Jujuy, Argentina</p>
+        </div>
+      </div>
+      <p class="footer__credit" data-i18n="footer.copyright">© Refugio del Pintor · Tilcara, Quebrada de Humahuaca</p>
+    </div>
+  </footer>
+
+</main>
+
+<!-- Room detail modal -->
+<div class="room-modal" id="room-modal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="room-modal-name">
+  <div class="room-modal__backdrop" data-close-modal></div>
+  <div class="room-modal__panel" role="document">
+    <button class="room-modal__close" type="button" data-close-modal data-i18n-aria-label="rooms.modal.closeLabel" aria-label="Cerrar">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M18 6 6 18"/>
+        <path d="m6 6 12 12"/>
+      </svg>
+    </button>
+    <figure class="room-modal__media">
+      <img id="room-modal-img" src="" alt="" loading="lazy">
+    </figure>
+    <div class="room-modal__content">
+      <p class="room-modal__count" id="room-modal-count"></p>
+      <h2 class="room-modal__name" id="room-modal-name"></h2>
+      <p class="room-modal__capacity" id="room-modal-capacity"></p>
+      <p class="room-modal__body" id="room-modal-body"></p>
+
+      <dl class="room-modal__specs">
+        <div class="room-modal__spec">
+          <dt data-i18n="rooms.modal.bathLabel">Baño</dt>
+          <dd id="room-modal-bath"></dd>
+        </div>
+        <div class="room-modal__spec">
+          <dt data-i18n="rooms.modal.viewLabel">Vista</dt>
+          <dd id="room-modal-view"></dd>
+        </div>
+      </dl>
+
+      <div class="room-modal__amenities">
+        <h3 data-i18n="rooms.modal.amenitiesLabel">Incluye</h3>
+        <ul id="room-modal-amenities"></ul>
+      </div>
+
+      <a class="cta room-modal__cta" id="room-modal-cta" href="#" target="_blank" rel="noopener noreferrer">
+        <span data-i18n="rooms.modal.bookCta">Reservar esta habitación</span>
+        <span class="cta__icon-wrap" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg>
+        </span>
+      </a>
+      <p class="room-modal__note" data-i18n="rooms.modal.note">El mensaje de WhatsApp ya viene con los datos de esta habitación.</p>
+    </div>
+  </div>
+</div>
+
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

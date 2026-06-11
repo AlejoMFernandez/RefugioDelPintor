@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es-AR" data-lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#F7F3EA">
+  <title>Galería · Refugio del Pintor</title>
+  <meta name="description" content="Galería del Refugio del Pintor en Tilcara. Adobe, piedra, madera, textiles del norte, y la Quebrada de fondo.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=Geist:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="gallery">
+
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="index.html" aria-label="Refugio del Pintor">
+      <span class="brand__mark"><em>del</em> Pintor</span>
+      <span class="brand__sub" data-i18n="header.brandSubline">Refugio de Pueblo</span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="habitaciones.html" data-nav="rooms" data-i18n="nav.rooms">Habitaciones</a>
+      <a href="galeria.html" data-nav="gallery" data-i18n="nav.gallery">Galería</a>
+      <a href="reservar.html" data-nav="booking" data-i18n="nav.book">Reservar</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="sound-toggle" type="button" aria-pressed="false" data-i18n-aria-label="header.soundOnAria" aria-label="Activar sonido ambiente">
+        <svg class="icon icon--sound-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M11 5 6 9H2v6h4l5 4z"/>
+          <line x1="22" y1="9" x2="16" y2="15"/>
+          <line x1="16" y1="9" x2="22" y2="15"/>
+        </svg>
+        <svg class="icon icon--sound-on" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M11 5 6 9H2v6h4l5 4z"/>
+          <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+        </svg>
+      </button>
+      <button class="icon-button lang-toggle" id="lang-toggle" type="button" data-i18n-aria-label="header.langSwitchAria" aria-label="Cambiar idioma">
+        <span data-i18n="header.langSwitch">EN</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="main" id="main">
+  <section class="page">
+    <div class="page__inner">
+      <p class="page-kicker" data-i18n="gallery.kicker">Galería</p>
+      <h1 class="page-title" data-i18n="gallery.heading">El refugio en imágenes.</h1>
+      <p class="page-lead" data-i18n="gallery.lead">Adobe, piedra, madera, textiles del norte. Y la Quebrada de fondo.</p>
+
+      <div class="gallery">
+
+        <figure class="gallery-figure gallery-figure--wide" data-reveal data-stagger="1">
+          <div class="gallery-figure__frame">
+            <img src="../img/exterior con mesaysilla y vista de otro lado mas arenoso y rustico vertical.jpeg"
+                 data-i18n-alt="alt.patio"
+                 alt="Patio interior con mesa de hierro y silla de mimbre"
+                 loading="lazy" decoding="async">
+          </div>
+          <figcaption class="gallery-figure__caption">
+            <span class="gallery-figure__caption-title">
+              <span class="when-es">Patio interior</span><span class="when-en">Inner patio</span>
+            </span>
+            <span class="gallery-figure__caption-tag">
+              <span class="when-es">planta baja</span><span class="when-en">ground floor</span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-figure" data-reveal data-stagger="2">
+          <div class="gallery-figure__frame">
+            <img src="../img/entrada con cartel refugiodelpintor vertical.jpeg"
+                 data-i18n-alt="alt.hero"
+                 alt="Entrada con el cartel tallado en madera"
+                 loading="lazy" decoding="async">
+          </div>
+          <figcaption class="gallery-figure__caption">
+            <span class="gallery-figure__caption-title">
+              <span class="when-es">Entrada</span><span class="when-en">Entrance</span>
+            </span>
+            <span class="gallery-figure__caption-tag">
+              <span class="when-es">el cartel</span><span class="when-en">the sign</span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-figure" data-reveal data-stagger="3">
+          <div class="gallery-figure__frame">
+            <img src="../img/exterior de adoquines y madera muy lindo vertical.jpeg"
+                 data-i18n-alt="alt.exterior"
+                 alt="Fachada en piedra y madera con la Quebrada de fondo"
+                 loading="lazy" decoding="async">
+          </div>
+          <figcaption class="gallery-figure__caption">
+            <span class="gallery-figure__caption-title">
+              <span class="when-es">Fachada</span><span class="when-en">Facade</span>
+            </span>
+            <span class="gallery-figure__caption-tag">
+              <span class="when-es">piedra y adobe</span><span class="when-en">stone and adobe</span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-figure" data-reveal data-stagger="4">
+          <div class="gallery-figure__frame">
+            <img src="../img/habitacion doble planta alta horizontal.jpeg"
+                 data-i18n-alt="alt.roomDouble"
+                 alt="Habitación doble en planta alta"
+                 loading="lazy" decoding="async">
+          </div>
+          <figcaption class="gallery-figure__caption">
+            <span class="gallery-figure__caption-title">
+              <span class="when-es">Habitación doble</span><span class="when-en">Double room</span>
+            </span>
+            <span class="gallery-figure__caption-tag">
+              <span class="when-es">planta alta</span><span class="when-en">upper floor</span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-figure" data-reveal data-stagger="1">
+          <div class="gallery-figure__frame">
+            <img src="../img/habitacion triple cama vertical.jpeg"
+                 data-i18n-alt="alt.roomTriple"
+                 alt="Habitación triple con cubrecamas andinos"
+                 loading="lazy" decoding="async">
+          </div>
+          <figcaption class="gallery-figure__caption">
+            <span class="gallery-figure__caption-title">
+              <span class="when-es">Habitación triple</span><span class="when-en">Triple room</span>
+            </span>
+            <span class="gallery-figure__caption-tag">
+              <span class="when-es">telar del norte</span><span class="when-en">northern weave</span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-figure" data-reveal data-stagger="2">
+          <div class="gallery-figure__frame">
+            <img src="../img/hacitacion planta alta horizontal.jpeg"
+                 data-i18n-alt="alt.roomFamily"
+                 alt="Cama con almohadón andino y vista a los cerros"
+                 loading="lazy" decoding="async">
+          </div>
+          <figcaption class="gallery-figure__caption">
+            <span class="gallery-figure__caption-title">
+              <span class="when-es">Vista al cerro</span><span class="when-en">Hill view</span>
+            </span>
+            <span class="gallery-figure__caption-tag">
+              <span class="when-es">desde la cama</span><span class="when-en">from the bed</span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-figure" data-reveal data-stagger="3">
+          <div class="gallery-figure__frame">
+            <img src="../img/vista interior con muebles de madera y paredes de adoquines vertical.jpeg"
+                 data-i18n-alt="alt.interiorStone"
+                 alt="Sala interior con muros de piedra y muebles de madera"
+                 loading="lazy" decoding="async">
+          </div>
+          <figcaption class="gallery-figure__caption">
+            <span class="gallery-figure__caption-title">
+              <span class="when-es">Sala interior</span><span class="when-en">Sitting room</span>
+            </span>
+            <span class="gallery-figure__caption-tag">
+              <span class="when-es">piedra y madera</span><span class="when-en">stone and wood</span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-figure gallery-figure--wide" data-reveal data-stagger="4">
+          <div class="gallery-figure__frame">
+            <img src="../img/vista interior de mesas y sillas de madera con chimenea horizontal.jpeg"
+                 data-i18n-alt="alt.diningRoom"
+                 alt="Comedor con paredes ocre, salamandra y mesas de madera"
+                 loading="lazy" decoding="async">
+          </div>
+          <figcaption class="gallery-figure__caption">
+            <span class="gallery-figure__caption-title">
+              <span class="when-es">Comedor</span><span class="when-en">Dining room</span>
+            </span>
+            <span class="gallery-figure__caption-tag">
+              <span class="when-es">salamandra y ocre</span><span class="when-en">wood stove, ochre walls</span>
+            </span>
+          </figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div>
+      <p class="site-footer__tagline" data-i18n="footer.tagline">No es un hotel. Es un refugio.</p>
+    </div>
+    <div class="site-footer__col">
+      <h4 data-i18n="footer.contactHeading">Contacto</h4>
+      <a id="footer-whatsapp" href="#" data-i18n="footer.whatsappDisplay">+54 9 3884 38-5736</a>
+      <a href="tel:+543884385736" data-i18n="footer.phoneDisplay">+54 388 438-5736</a>
+      <a href="https://instagram.com/delpintorrefugio" target="_blank" rel="noopener noreferrer" data-i18n="footer.instagramHandle">@delpintorrefugio</a>
+    </div>
+    <div class="site-footer__col">
+      <h4 data-i18n="footer.addressLabel">Dirección</h4>
+      <p data-i18n="footer.address">Alverro 660, Y4624 Tilcara, Jujuy, Argentina</p>
+    </div>
+  </div>
+  <div class="site-footer__bottom">
+    <p data-i18n="footer.copyright">© Refugio del Pintor · Tilcara, Quebrada de Humahuaca</p>
+    <p class="site-footer__credit" data-i18n="footer.creditLine">Hecho con respeto por el paisaje.</p>
+  </div>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
