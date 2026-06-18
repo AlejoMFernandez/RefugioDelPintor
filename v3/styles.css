@@ -446,39 +446,81 @@ strong { font-weight: 600; }
   padding-block: var(--space-7);
 }
 .promo__inner {
-  border: 1px solid var(--terracotta);
   border-radius: var(--radius);
-  padding: var(--space-6) var(--space-7);
-  background: oklch(0.96 0.015 45 / 0.45);
+  padding: var(--space-7) var(--space-7);
+  background: var(--terracotta);
+  color: #fff;
   position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.promo__inner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 18px,
+    oklch(1 0 0 / 0.06) 18px,
+    oklch(1 0 0 / 0.06) 20px
+  );
+  pointer-events: none;
+}
+.promo__badge {
+  display: inline-block;
+  background: #fff;
+  color: var(--terracotta);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--fs-2xl);
+  letter-spacing: -0.02em;
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radius);
+  margin-bottom: var(--space-4);
+  position: relative;
+  font-variation-settings: "opsz" 36;
 }
 .promo__kicker {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: var(--fs-xs);
-  color: var(--terracotta);
+  font-size: var(--fs-sm);
+  color: oklch(1 0 0 / 0.8);
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-3);
   font-variation-settings: "opsz" 14;
+  position: relative;
 }
 .promo__title {
   font-family: var(--font-display);
-  font-size: var(--fs-2xl);
+  font-size: var(--fs-3xl);
   font-weight: 400;
   letter-spacing: -0.02em;
   line-height: 1.1;
   margin-bottom: var(--space-3);
-  font-variation-settings: "opsz" 36;
+  font-variation-settings: "opsz" 44;
+  position: relative;
 }
 .promo__body {
   font-size: var(--fs-base);
-  color: var(--ink-soft);
+  color: oklch(1 0 0 / 0.85);
   line-height: 1.6;
   max-width: 50ch;
+  margin-inline: auto;
   margin-bottom: var(--space-5);
+  position: relative;
 }
 .promo__body:last-child { margin-bottom: 0; }
+.promo .cta--small {
+  background: #fff;
+  color: var(--terracotta);
+  border-color: #fff;
+  font-weight: 600;
+}
+.promo .cta--small:hover {
+  background: oklch(1 0 0 / 0.9);
+}
 
 /* ===== Page catalog menu (home) ===== */
 .catalog {
@@ -1191,6 +1233,20 @@ strong { font-weight: 600; }
   }
   .room-card:hover .room-card__cta { color: var(--terracotta); }
   .room-card:hover .room-card__figure img { transform: scale(1.04); }
+}
+.room-card--wide { grid-column: 1 / -1; }
+@media (min-width: 760px) {
+  .room-card--wide {
+    flex-direction: row;
+  }
+  .room-card--wide .room-card__figure {
+    flex: 0 0 45%;
+    aspect-ratio: 16/10;
+  }
+  .room-card--wide .room-card__body {
+    justify-content: center;
+    padding: var(--space-6) var(--space-7);
+  }
 }
 .room-card__figure { margin: 0; overflow: hidden; aspect-ratio: 4/3; }
 .room-card__figure img {
