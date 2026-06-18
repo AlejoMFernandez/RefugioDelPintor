@@ -512,7 +512,7 @@ strong { font-weight: 600; }
 
 /* ===== Page catalog menu (home) ===== */
 .catalog {
-  padding-block: var(--space-9);
+  padding-block: var(--space-7) var(--space-9);
   padding-inline: var(--page-x);
   max-width: var(--content-max);
   margin-inline: auto;
