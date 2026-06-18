@@ -363,13 +363,13 @@ strong { font-weight: 600; }
 .home-hero {
   display: grid;
   grid-template-columns: 1fr;
-  max-height: 100dvh;
+  max-height: calc(100dvh - var(--header-h, 3.5rem));
   overflow: hidden;
 }
 @media (min-width: 820px) {
   .home-hero {
     grid-template-columns: 1fr 1fr;
-    height: 100dvh;
+    height: calc(100dvh - var(--header-h, 3.5rem));
   }
 }
 .home-hero__media {
