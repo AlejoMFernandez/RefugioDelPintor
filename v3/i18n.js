@@ -79,6 +79,17 @@ const I18N = {
         note: 'El mensaje de WhatsApp ya viene con los datos de esta habitación.'
       },
       rateLabel: 'por noche',
+      single: {
+        name: 'Single',
+        countLabel: '9 disponibles',
+        rate: 'USD 58',
+        capacity: 'Para 1 persona',
+        body: 'Misma habitación que la Doble, con ocupación individual. Sommier Queen o King, baño privado.',
+        bath: 'Baño privado con ducha de alta presión.',
+        view: 'Disponible en planta alta (vista a la Quebrada) o planta baja (patio interior). Indicá tu preferencia al reservar.',
+        amenities: ['WiFi', 'Calefacción', 'Sommier Queen o King', 'Ropa blanca de calidad', 'Amenities'],
+        bookingMessage: 'Hola Ricardo, me gustaría consultar disponibilidad para una habitación Single en el Refugio del Pintor.'
+      },
       double: {
         name: 'Doble',
         countLabel: '9 disponibles',
@@ -102,7 +113,7 @@ const I18N = {
         bookingMessage: 'Hola Ricardo, me gustaría consultar disponibilidad para una habitación Triple en el Refugio del Pintor.'
       },
       family: {
-        name: 'Cuádruple',
+        name: 'Familiar',
         countLabel: '1 disponible',
         rate: 'USD 136',
         capacity: 'Hasta 5 personas',
@@ -283,6 +294,17 @@ const I18N = {
         note: 'The WhatsApp message comes pre-filled with this room\'s details.'
       },
       rateLabel: 'per night',
+      single: {
+        name: 'Single',
+        countLabel: '9 available',
+        rate: 'USD 58',
+        capacity: 'For 1 guest',
+        body: 'Same room as the Double, single occupancy. Queen or King sommier, private bathroom.',
+        bath: 'Private bathroom with high-pressure shower.',
+        view: 'Available on the upper floor (Quebrada view) or the ground floor (inner patio). State your preference when booking.',
+        amenities: ['WiFi', 'Heating', 'Queen or King sommier', 'Quality linen', 'Amenities'],
+        bookingMessage: 'Hello Ricardo, I would like to check availability for a Single room at Refugio del Pintor.'
+      },
       double: {
         name: 'Double',
         countLabel: '9 available',
@@ -306,7 +328,7 @@ const I18N = {
         bookingMessage: 'Hello Ricardo, I would like to check availability for a Triple room at Refugio del Pintor.'
       },
       family: {
-        name: 'Quadruple',
+        name: 'Family',
         countLabel: '1 available',
         rate: 'USD 136',
         capacity: 'Up to 5 guests',

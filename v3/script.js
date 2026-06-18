@@ -425,11 +425,13 @@
 
   // ===== Room detail modal =====
   const ROOM_IMAGES = {
+    single: '../img/habitacion doble planta alta horizontal.jpeg',
     double: '../img/habitacion doble planta alta horizontal.jpeg',
     triple: '../img/habitacion triple cama vertical.jpeg',
     family: '../img/hacitacion planta alta horizontal.jpeg'
   };
   const ROOM_ALT_KEYS = {
+    single: 'alt.roomDouble',
     double: 'alt.roomDouble',
     triple: 'alt.roomTriple',
     family: 'alt.roomFamily'

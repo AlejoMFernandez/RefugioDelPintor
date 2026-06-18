@@ -54,6 +54,26 @@
       <p class="page-lead" data-i18n="rooms.lead">Cada una con carácter propio. Al reservar podés indicar tu preferencia de planta, sujeto a disponibilidad.</p>
 
       <div class="rooms-grid">
+        <button class="room-card" type="button" data-room-open="single" aria-label="Habitación Single. Ver detalle" data-reveal>
+          <figure class="room-card__figure">
+            <img src="../img/habitacion doble planta alta horizontal.jpeg"
+                 data-i18n-alt="alt.roomDouble"
+                 alt="Habitación single en planta alta con vista a la Quebrada"
+                 width="1086" height="724" loading="lazy" decoding="async">
+          </figure>
+          <div class="room-card__body">
+            <p class="room-card__count" data-i18n="rooms.single.countLabel">9 disponibles</p>
+            <h3 class="room-card__name" data-i18n="rooms.single.name">Single</h3>
+            <p class="room-card__rate"><span data-i18n="rooms.single.rate">Consultar</span> <span class="room-card__rate-label" data-i18n="rooms.rateLabel">por noche</span></p>
+            <p class="room-card__capacity" data-i18n="rooms.single.capacity">Para 1 persona</p>
+            <p class="room-card__body-text" data-i18n="rooms.single.body">Misma habitación que la Doble, con ocupación individual.</p>
+            <span class="room-card__cta">
+              <span data-i18n="rooms.detailCta">Ver detalle</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+            </span>
+          </div>
+        </button>
+
         <button class="room-card" type="button" data-room-open="double" aria-label="Habitación Doble. Ver detalle" data-reveal>
           <figure class="room-card__figure">
             <img src="../img/habitacion doble planta alta horizontal.jpeg"
@@ -94,7 +114,7 @@
           </div>
         </button>
 
-        <button class="room-card" type="button" data-room-open="family" aria-label="Habitación Cuádruple. Ver detalle" data-reveal>
+        <button class="room-card" type="button" data-room-open="family" aria-label="Habitación Familiar. Ver detalle" data-reveal>
           <figure class="room-card__figure">
             <img src="../img/hacitacion planta alta horizontal.jpeg"
                  data-i18n-alt="alt.roomFamily"
