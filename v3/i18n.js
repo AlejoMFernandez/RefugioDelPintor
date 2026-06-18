@@ -17,6 +17,7 @@ const I18N = {
       gallery: 'Galería',
       reviews: 'Voces',
       location: 'Cómo llegar',
+      rates: 'Tarifas',
       book: 'Reservar'
     },
     header: {
@@ -77,9 +78,11 @@ const I18N = {
         bookCta: 'Reservar esta habitación',
         note: 'El mensaje de WhatsApp ya viene con los datos de esta habitación.'
       },
+      rateLabel: 'por noche',
       double: {
         name: 'Doble',
         countLabel: '9 disponibles',
+        rate: 'USD 83',
         capacity: 'Para 2 personas',
         body: 'Cama matrimonial o twin, con sommier Queen o King. Baño privado. Para parejas o viajeros que buscan comodidad sin excesos.',
         bath: 'Baño privado con ducha de alta presión.',
@@ -90,6 +93,7 @@ const I18N = {
       triple: {
         name: 'Triple',
         countLabel: '3 disponibles',
+        rate: 'USD 110',
         capacity: 'Para 3 personas',
         body: 'Tres camas individuales con sommier. Baño privado. Para grupos de amigos o familias pequeñas.',
         bath: 'Baño privado con ducha de alta presión.',
@@ -98,8 +102,9 @@ const I18N = {
         bookingMessage: 'Hola Ricardo, me gustaría consultar disponibilidad para una habitación Triple en el Refugio del Pintor.'
       },
       family: {
-        name: 'Familiar',
+        name: 'Cuádruple',
         countLabel: '1 disponible',
+        rate: 'USD 136',
         capacity: 'Hasta 5 personas',
         body: 'Dos espacios intercomunicados: el primero con tres camas twin, el segundo con cama matrimonial. Baño compartido entre ambos. Para familias que necesitan amplitud sin perder intimidad.',
         bath: 'Baño compartido entre los dos ambientes.',
@@ -216,6 +221,7 @@ const I18N = {
       gallery: 'Gallery',
       reviews: 'Voices',
       location: 'Find us',
+      rates: 'Rates',
       book: 'Book'
     },
     header: {
@@ -276,9 +282,11 @@ const I18N = {
         bookCta: 'Book this room',
         note: 'The WhatsApp message comes pre-filled with this room\'s details.'
       },
+      rateLabel: 'per night',
       double: {
         name: 'Double',
         countLabel: '9 available',
+        rate: 'USD 83',
         capacity: 'For 2 guests',
         body: 'A matrimonial or twin bed, Queen or King sommier. Private bathroom. For couples or travellers who want comfort without excess.',
         bath: 'Private bathroom with high-pressure shower.',
@@ -289,6 +297,7 @@ const I18N = {
       triple: {
         name: 'Triple',
         countLabel: '3 available',
+        rate: 'USD 110',
         capacity: 'For 3 guests',
         body: 'Three single beds with sommier. Private bathroom. For groups of friends or small families.',
         bath: 'Private bathroom with high-pressure shower.',
@@ -297,8 +306,9 @@ const I18N = {
         bookingMessage: 'Hello Ricardo, I would like to check availability for a Triple room at Refugio del Pintor.'
       },
       family: {
-        name: 'Family',
+        name: 'Quadruple',
         countLabel: '1 available',
+        rate: 'USD 136',
         capacity: 'Up to 5 guests',
         body: 'Two connected spaces: the first with three twin beds, the second with a matrimonial bed. A shared bathroom between them. For families who need room without losing intimacy.',
         bath: 'A shared bathroom between the two spaces.',

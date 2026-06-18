@@ -361,10 +361,42 @@ strong { font-weight: 600; }
 
 /* ===== Home hero ===== */
 .home-hero {
-  padding-block: clamp(3.5rem, 8vw, 7rem) clamp(3rem, 7vw, 6rem);
-  padding-inline: var(--page-x);
-  max-width: var(--content-max);
-  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  max-height: 100dvh;
+  overflow: hidden;
+}
+@media (min-width: 820px) {
+  .home-hero {
+    grid-template-columns: 1fr 1fr;
+    height: 100dvh;
+  }
+}
+.home-hero__media {
+  margin: 0;
+  position: relative;
+  height: 50dvh;
+  overflow: hidden;
+}
+@media (min-width: 820px) {
+  .home-hero__media { height: auto; }
+}
+.home-hero__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.home-hero__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-8) var(--page-x) var(--space-7);
+}
+@media (min-width: 820px) {
+  .home-hero__content {
+    padding: var(--space-9) var(--space-8);
+  }
 }
 .home-hero__eyebrow {
   font-family: var(--font-display);
@@ -399,19 +431,54 @@ strong { font-weight: 600; }
   margin-bottom: var(--space-7);
   font-variation-settings: "opsz" 28, "SOFT" 60;
 }
-.home-hero__body {
-  font-size: var(--fs-md);
-  color: var(--ink-soft);
-  max-width: 52ch;
-  line-height: 1.65;
-  margin-bottom: var(--space-7);
-}
 .home-hero__actions {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-4);
   align-items: center;
 }
+
+/* ===== Promo banner ===== */
+.promo {
+  padding-inline: var(--page-x);
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding-block: var(--space-7);
+}
+.promo__inner {
+  border: 1px solid var(--terracotta);
+  border-radius: var(--radius);
+  padding: var(--space-6) var(--space-7);
+  background: oklch(0.96 0.015 45 / 0.45);
+  position: relative;
+}
+.promo__kicker {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--fs-xs);
+  color: var(--terracotta);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+  font-variation-settings: "opsz" 14;
+}
+.promo__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: var(--space-3);
+  font-variation-settings: "opsz" 36;
+}
+.promo__body {
+  font-size: var(--fs-base);
+  color: var(--ink-soft);
+  line-height: 1.6;
+  max-width: 50ch;
+  margin-bottom: var(--space-5);
+}
+.promo__body:last-child { margin-bottom: 0; }
 
 /* ===== Page catalog menu (home) ===== */
 .catalog {
@@ -1154,6 +1221,19 @@ strong { font-weight: 600; }
   margin: 0;
   color: var(--ink);
 }
+.room-card__rate {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: 400;
+  color: var(--terracotta);
+  margin: var(--space-2) 0 0;
+  font-variation-settings: "opsz" 24;
+}
+.room-card__rate-label {
+  font-size: var(--fs-xs);
+  color: var(--ink-muted);
+  font-style: italic;
+}
 .room-card__capacity {
   font-family: var(--font-display);
   font-style: italic;
@@ -1269,6 +1349,14 @@ body.modal-open { overflow: hidden; }
   margin: 0;
   color: var(--ink);
 }
+.room-modal__rate {
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  font-weight: 400;
+  color: var(--terracotta);
+  margin: var(--space-2) 0 0;
+  font-variation-settings: "opsz" 24;
+}
 .room-modal__capacity {
   font-family: var(--font-display);
   font-style: italic;
@@ -1348,6 +1436,110 @@ body.modal-open { overflow: hidden; }
 @keyframes rm-slide-up {
   from { opacity: 0; transform: translateY(20px) scale(0.98); }
   to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ===== Rates page ===== */
+.rates-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+  margin-bottom: var(--space-7);
+}
+@media (min-width: 720px) {
+  .rates-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.rate-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: var(--space-6) var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  background: var(--paper);
+  transition: border-color var(--t-base) var(--ease-out-strong);
+}
+.rate-card--featured {
+  border-color: var(--terracotta);
+  background: oklch(0.96 0.015 45 / 0.45);
+}
+@media (hover: hover) and (pointer: fine) {
+  .rate-card:hover { border-color: var(--terracotta); }
+}
+.rate-card__header {
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--line);
+}
+.rate-card__name {
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: var(--space-2);
+  font-variation-settings: "opsz" 36;
+}
+.rate-card__capacity {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--fs-sm);
+  color: var(--ink-muted);
+  font-variation-settings: "opsz" 14;
+}
+.rate-card__price {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+.rate-card__amount {
+  font-family: var(--font-display);
+  font-size: var(--fs-3xl);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  font-variation-settings: "opsz" 48;
+}
+.rate-card__unit {
+  font-size: var(--fs-sm);
+  color: var(--ink-muted);
+}
+.rate-card__features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  flex: 1;
+}
+.rate-card__features li {
+  font-size: var(--fs-sm);
+  color: var(--ink-soft);
+  line-height: 1.5;
+  padding-left: var(--space-4);
+  position: relative;
+}
+.rate-card__features li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 6px;
+  height: 1px;
+  background: var(--terracotta);
+}
+.rate-card__cta {
+  align-self: flex-start;
+  margin-top: auto;
+}
+.rates-note {
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--line);
+}
+.rates-note p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--fs-sm);
+  color: var(--ink-muted);
+  max-width: var(--measure);
+  line-height: 1.5;
+  font-variation-settings: "opsz" 14;
 }
 
 /* ===== Reduced motion ===== */

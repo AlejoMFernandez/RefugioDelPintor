@@ -190,7 +190,7 @@
   function updateWhatsAppLinks(dict) {
     const msg = encodeURIComponent(dict.booking.messageTemplate);
     const href = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + msg;
-    ['hero-cta', 'header-cta', 'booking-cta', 'footer-whatsapp'].forEach((id) => {
+    ['hero-cta', 'header-cta', 'booking-cta', 'promo-cta', 'footer-whatsapp'].forEach((id) => {
       const el = document.getElementById(id);
       if (!el) return;
       el.setAttribute('href', href);
@@ -454,6 +454,8 @@
     setText('room-modal-count', room.countLabel);
     setText('room-modal-name', room.name);
     setText('room-modal-capacity', room.capacity);
+    const rateLabel = window.i18nGet(lang, 'rooms.rateLabel') || '';
+    setText('room-modal-rate', room.rate ? room.rate + ' ' + rateLabel : '');
     setText('room-modal-body', room.body);
     setText('room-modal-bath', room.bath);
     setText('room-modal-view', room.view);
