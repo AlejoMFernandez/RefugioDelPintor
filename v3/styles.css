@@ -454,16 +454,17 @@ strong { font-weight: 600; }
 .promo__inner {
   border-radius: var(--radius);
   padding: var(--space-7) var(--space-7);
-  background: var(--terracotta);
-  color: #fff;
+  border: 2px solid var(--terracotta);
+  background: transparent;
+  color: var(--ink);
   position: relative;
   overflow: hidden;
   text-align: center;
 }
 .promo__badge {
   display: inline-block;
-  background: #fff;
-  color: var(--terracotta);
+  background: var(--terracotta);
+  color: #fff;
   font-family: var(--font-display);
   font-weight: 700;
   font-size: var(--fs-2xl);
@@ -478,7 +479,7 @@ strong { font-weight: 600; }
   font-family: var(--font-display);
   font-style: italic;
   font-size: var(--fs-sm);
-  color: oklch(1 0 0 / 0.8);
+  color: var(--terracotta);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: var(--space-3);
@@ -494,11 +495,11 @@ strong { font-weight: 600; }
   margin-bottom: var(--space-3);
   font-variation-settings: "opsz" 44;
   position: relative;
-  color: #fff;
+  color: var(--ink);
 }
 .promo__body {
   font-size: var(--fs-base);
-  color: oklch(1 0 0 / 0.85);
+  color: var(--ink-soft);
   line-height: 1.6;
   max-width: 50ch;
   margin-inline: auto;
@@ -507,13 +508,13 @@ strong { font-weight: 600; }
 }
 .promo__body:last-child { margin-bottom: 0; }
 .promo .cta--small {
-  background: #fff;
-  color: var(--terracotta);
-  border-color: #fff;
+  background: var(--terracotta);
+  color: #fff;
+  border-color: var(--terracotta);
   font-weight: 600;
 }
 .promo .cta--small:hover {
-  background: oklch(1 0 0 / 0.9);
+  background: oklch(0.48 0.12 35);
 }
 
 /* ===== Page catalog menu (home) ===== */
