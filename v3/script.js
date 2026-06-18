@@ -538,9 +538,6 @@
 
   // ===== Init =====
   function init() {
-    const hdr = document.querySelector('.site-header');
-    if (hdr) document.documentElement.style.setProperty('--header-h', hdr.offsetHeight + 'px');
-
     highlightActiveNav();
     initLangToggle();
     initSoundToggle();

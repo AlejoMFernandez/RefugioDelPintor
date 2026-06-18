@@ -360,16 +360,22 @@ strong { font-weight: 600; }
 .page-body:last-child { margin-bottom: 0; }
 
 /* ===== Home hero ===== */
+[data-page="home"] .site-header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: oklch(0.97 0.008 75 / 0.7);
+}
 .home-hero {
   display: grid;
   grid-template-columns: 1fr;
-  max-height: calc(100dvh - var(--header-h, 3.5rem));
+  max-height: 100dvh;
   overflow: hidden;
 }
 @media (min-width: 820px) {
   .home-hero {
     grid-template-columns: 1fr 1fr;
-    height: calc(100dvh - var(--header-h, 3.5rem));
+    height: 100dvh;
   }
 }
 .home-hero__media {
