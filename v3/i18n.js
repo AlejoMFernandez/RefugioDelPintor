@@ -6,7 +6,7 @@ const I18N = {
   es: {
     meta: {
       title: 'Refugio del Pintor · Hospedaje en Tilcara, Quebrada de Humahuaca',
-      description: 'No es un hotel. Es un refugio. 13 habitaciones en Tilcara, al pie de la Quebrada de Humahuaca. Reservas directas por WhatsApp.',
+      description: 'Un alto en la huella para descansar y seguir viaje. 14 habitaciones en Tilcara, al pie de la Quebrada de Humahuaca. Reservas directas por WhatsApp.',
       langCode: 'es-AR'
     },
     nav: {
@@ -22,7 +22,7 @@ const I18N = {
     },
     header: {
       brandName: 'del Pintor',
-      brandSubline: 'Refugio de Pueblo',
+      brandSubline: 'Humahuaca · Norte Argentino',
       langSwitch: 'EN',
       langSwitchAria: 'Cambiar idioma a inglés',
       soundOnAria: 'Activar sonido ambiente',
@@ -31,9 +31,9 @@ const I18N = {
     },
     hero: {
       eyebrow: 'Tilcara · Quebrada de Humahuaca',
-      tagline: 'No es un hotel.',
-      taglineEm: 'Es un refugio.',
-      subtitle: 'Trece habitaciones de adobe, piedra y madera, al pie de la Quebrada. Recibidos por quien las construyó.',
+      tagline: 'Es un alto en la huella',
+      taglineEm: 'para descansar y seguir viaje.',
+      subtitle: 'Catorce habitaciones de adobe, piedra y madera, al pie de la Quebrada. Recibidos por quien las construyó.',
       ctaPrimary: 'Reservar por WhatsApp',
       ctaSecondary: 'Conocer el lugar',
       scrollHint: 'Bajar'
@@ -41,7 +41,7 @@ const I18N = {
     essence: {
       kicker: 'La esencia',
       heading: 'Un lugar donde parar, respirar, y volver a lo esencial.',
-      lead: 'Refugio del Pintor nació de una convicción simple: la hospitalidad genuina no necesita artificios.',
+      lead: 'Propia del lugar, se mimetiza en el entorno.',
       body: 'Solo respeto por el paisaje, identidad propia, y un anfitrión que entienda lo que significa recibir. Acá no hay lobby de mármol ni cadenas. Hay piedra, adobe, madera, y la Quebrada entrando por las ventanas.'
     },
     origin: {
@@ -67,8 +67,8 @@ const I18N = {
     },
     rooms: {
       kicker: 'Las habitaciones',
-      heading: 'Trece habitaciones, en dos plantas.',
-      lead: 'Cada una con carácter propio. Al reservar podés indicar tu preferencia de planta, sujeto a disponibilidad.',
+      heading: 'Catorce habitaciones, cada una con su carácter.',
+      lead: 'Todas con sommiers Queen y King size, baño privado, calefacción y WiFi. Al reservar podés indicar tu preferencia de planta, sujeto a disponibilidad.',
       detailCta: 'Ver detalle',
       modal: {
         closeLabel: 'Cerrar',
@@ -125,9 +125,9 @@ const I18N = {
       },
       floorsHeading: 'Plantas y vistas',
       upperLabel: 'Planta alta',
-      upperBody: 'Mira hacia la Quebrada. Cerros, cielo abierto, atardeceres que cambian de color cada minuto.',
+      upperBody: 'La Quebrada a pleno.',
       lowerLabel: 'Planta baja',
-      lowerBody: 'Da al patio interior. Más resguardada, verde, silenciosa.'
+      lowerBody: 'Habitaciones monacales, mirando al patio del molle.'
     },
     services: {
       kicker: 'Servicios',
@@ -193,7 +193,7 @@ const I18N = {
       messageTemplate: 'Hola Ricardo, me gustaría consultar disponibilidad en el Refugio del Pintor.'
     },
     footer: {
-      tagline: 'No es un hotel. Es un refugio.',
+      tagline: 'Un alto en la huella… y seguir viaje.',
       contactHeading: 'Contacto',
       addressLabel: 'Dirección',
       address: 'Alverro 660, Y4624 Tilcara, Jujuy, Argentina',
@@ -210,9 +210,10 @@ const I18N = {
       hero: 'Entrada del Refugio del Pintor con el cartel tallado en madera',
       patio: 'Patio interior con mesa de hierro y silla de mimbre frente a paredes de adobe',
       exterior: 'Fachada en piedra y madera con la Quebrada de fondo',
-      roomDouble: 'Habitación doble en planta alta con vista a la Quebrada al atardecer',
-      roomTriple: 'Habitación triple con paredes ocre y cubrecamas de telar andino',
-      roomFamily: 'Cama con almohadón andino y vista a los cerros de Tilcara',
+      roomSingle: 'Habitación single con muro de piedra, techo de caña y ventana al verde',
+      roomDouble: 'Habitación matrimonial con ventana abierta a los cerros de la Quebrada',
+      roomTriple: 'Habitación triple con techo de caña, vigas de madera y cubrecamas a rayas',
+      roomFamily: 'Habitación con tres camas, muros de piedra y techo de caña',
       interiorStone: 'Sala interior con muros de piedra y muebles de madera',
       diningRoom: 'Comedor con paredes ocre, salamandra y mesas de madera'
     }
@@ -221,7 +222,7 @@ const I18N = {
   en: {
     meta: {
       title: 'Refugio del Pintor · Stay in Tilcara, Quebrada de Humahuaca',
-      description: 'Not a hotel. A refuge. 13 rooms in Tilcara, at the foot of the Quebrada de Humahuaca. Book directly on WhatsApp.',
+      description: 'A stop along the trail to rest and move on. 14 rooms in Tilcara, at the foot of the Quebrada de Humahuaca. Book directly on WhatsApp.',
       langCode: 'en'
     },
     nav: {
@@ -237,7 +238,7 @@ const I18N = {
     },
     header: {
       brandName: 'del Pintor',
-      brandSubline: 'A village refuge',
+      brandSubline: 'Humahuaca · Northern Argentina',
       langSwitch: 'ES',
       langSwitchAria: 'Switch language to Spanish',
       soundOnAria: 'Turn ambient sound on',
@@ -246,9 +247,9 @@ const I18N = {
     },
     hero: {
       eyebrow: 'Tilcara · Quebrada de Humahuaca',
-      tagline: 'Not a hotel.',
-      taglineEm: 'A refuge.',
-      subtitle: 'Thirteen rooms of adobe, stone and timber, at the foot of the Quebrada. Welcomed by the man who built them.',
+      tagline: 'A stop along the trail',
+      taglineEm: 'to rest and move on.',
+      subtitle: 'Fourteen rooms of adobe, stone and timber, at the foot of the Quebrada. Welcomed by the man who built them.',
       ctaPrimary: 'Book on WhatsApp',
       ctaSecondary: 'See the place',
       scrollHint: 'Scroll'
@@ -256,7 +257,7 @@ const I18N = {
     essence: {
       kicker: 'The essence',
       heading: 'A place to pause, breathe, and return to what matters.',
-      lead: 'Refugio del Pintor was born from a simple conviction: genuine hospitality needs no artifice.',
+      lead: 'Born of this land, it blends into its surroundings.',
       body: 'Only respect for the landscape, an identity of its own, and a host who knows what it means to welcome someone. No marble lobby, no chain branding. Stone, adobe, timber, and the Quebrada coming in through the windows.'
     },
     origin: {
@@ -282,8 +283,8 @@ const I18N = {
     },
     rooms: {
       kicker: 'The rooms',
-      heading: 'Thirteen rooms, across two floors.',
-      lead: 'Each one with its own character. When you book you can request a floor preference, subject to availability.',
+      heading: 'Fourteen rooms, each with its own character.',
+      lead: 'All with Queen and King size beds, private bathroom, heating and WiFi. When you book you can request a floor preference, subject to availability.',
       detailCta: 'See detail',
       modal: {
         closeLabel: 'Close',
@@ -340,9 +341,9 @@ const I18N = {
       },
       floorsHeading: 'Floors and views',
       upperLabel: 'Upper floor',
-      upperBody: 'Looks toward the Quebrada. Mountains, open sky, sunsets that change colour by the minute.',
+      upperBody: 'The Quebrada in full view.',
       lowerLabel: 'Ground floor',
-      lowerBody: 'Opens onto the inner patio. More sheltered, green, quiet.'
+      lowerBody: 'Monastic rooms looking onto the molle tree patio.'
     },
     services: {
       kicker: 'Services',
@@ -408,7 +409,7 @@ const I18N = {
       messageTemplate: 'Hello Ricardo, I would like to check availability at Refugio del Pintor.'
     },
     footer: {
-      tagline: 'Not a hotel. A refuge.',
+      tagline: 'A stop along the trail… and on you go.',
       contactHeading: 'Contact',
       addressLabel: 'Address',
       address: 'Alverro 660, Y4624 Tilcara, Jujuy, Argentina',
@@ -425,9 +426,10 @@ const I18N = {
       hero: 'Entrance to Refugio del Pintor with carved wooden sign',
       patio: 'Inner patio with iron table and wicker chair against adobe walls',
       exterior: 'Stone and timber facade with the Quebrada mountains beyond',
-      roomDouble: 'Upper-floor double room overlooking the Quebrada at sunset',
-      roomTriple: 'Triple room with ochre walls and woven Andean bedcovers',
-      roomFamily: 'Bed with Andean pillow and view of the Tilcara hills',
+      roomSingle: 'Single room with stone wall, cane ceiling and a window onto green',
+      roomDouble: 'Double room with a window open to the Quebrada hills',
+      roomTriple: 'Triple room with cane ceiling, timber beams and striped bedspreads',
+      roomFamily: 'Room with three beds, stone walls and cane ceiling',
       interiorStone: 'Stone-walled sitting room with wooden furniture',
       diningRoom: 'Dining room with ochre walls, wood-burning stove and wooden tables'
     }

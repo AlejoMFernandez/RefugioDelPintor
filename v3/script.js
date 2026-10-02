@@ -190,7 +190,7 @@
   function updateWhatsAppLinks(dict) {
     const msg = encodeURIComponent(dict.booking.messageTemplate);
     const href = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + msg;
-    ['hero-cta', 'header-cta', 'booking-cta', 'promo-cta', 'footer-whatsapp'].forEach((id) => {
+    ['hero-cta', 'header-cta', 'booking-cta', 'footer-whatsapp'].forEach((id) => {
       const el = document.getElementById(id);
       if (!el) return;
       el.setAttribute('href', href);
@@ -425,13 +425,13 @@
 
   // ===== Room detail modal =====
   const ROOM_IMAGES = {
-    single: '../img/habitacion doble planta alta horizontal.jpeg',
-    double: '../img/habitacion doble planta alta horizontal.jpeg',
-    triple: '../img/habitacion triple cama vertical.jpeg',
-    family: '../img/hacitacion planta alta horizontal.jpeg'
+    single: '../img/hbt-single.jpg',
+    double: '../img/hbt-matrimonial.jpg',
+    triple: '../img/hbt-triple.jpg',
+    family: '../img/hbt-familiar.jpg'
   };
   const ROOM_ALT_KEYS = {
-    single: 'alt.roomDouble',
+    single: 'alt.roomSingle',
     double: 'alt.roomDouble',
     triple: 'alt.roomTriple',
     family: 'alt.roomFamily'

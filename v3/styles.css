@@ -221,7 +221,11 @@ strong { font-weight: 600; }
   .nav a:hover { color: var(--ink); }
 }
 @media (max-width: 600px) {
-  .nav { gap: var(--space-4); font-size: var(--fs-xs); }
+  .nav { gap: var(--space-3); font-size: var(--fs-xs); }
+  .site-header__inner { gap: var(--space-2); }
+  .brand__sub { max-width: 12ch; line-height: 1.25; }
+  .header-actions { gap: 0; }
+  .icon-button { width: 28px; }
 }
 
 .header-actions {
