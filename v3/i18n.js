@@ -213,7 +213,7 @@ const I18N = {
       roomSingle: 'Habitación single con muro de piedra, techo de caña y ventana al verde',
       roomDouble: 'Habitación matrimonial con ventana abierta a los cerros de la Quebrada',
       roomTriple: 'Habitación triple con techo de caña, vigas de madera y cubrecamas a rayas',
-      roomFamily: 'Habitación con tres camas, muros de piedra y techo de caña',
+      roomFamily: 'Cama con almohadón andino y vista a los cerros de Tilcara',
       interiorStone: 'Sala interior con muros de piedra y muebles de madera',
       diningRoom: 'Comedor con paredes ocre, salamandra y mesas de madera'
     }
@@ -429,7 +429,7 @@ const I18N = {
       roomSingle: 'Single room with stone wall, cane ceiling and a window onto green',
       roomDouble: 'Double room with a window open to the Quebrada hills',
       roomTriple: 'Triple room with cane ceiling, timber beams and striped bedspreads',
-      roomFamily: 'Room with three beds, stone walls and cane ceiling',
+      roomFamily: 'Bed with Andean cushion and a view of the Tilcara hills',
       interiorStone: 'Stone-walled sitting room with wooden furniture',
       diningRoom: 'Dining room with ochre walls, wood-burning stove and wooden tables'
     }

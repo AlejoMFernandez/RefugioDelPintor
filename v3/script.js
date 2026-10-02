@@ -428,7 +428,7 @@
     single: '../img/hbt-single.jpg',
     double: '../img/hbt-matrimonial.jpg',
     triple: '../img/hbt-triple.jpg',
-    family: '../img/hbt-familiar.jpg'
+    family: '../img/hacitacion planta alta horizontal.jpeg'
   };
   const ROOM_ALT_KEYS = {
     single: 'alt.roomSingle',
