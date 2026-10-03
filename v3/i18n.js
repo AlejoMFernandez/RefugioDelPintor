@@ -2,6 +2,16 @@
 // Bilingual content dictionary (ES / EN). Default: ES.
 // Toggle persisted in localStorage. Used by script.js via window.I18N.
 
+// ===== PROMOCIONES (editar acá) =====
+// Fechas en formato MM-DD, inclusive. Se repiten todos los años.
+// La web muestra sola la promo vigente según la fecha del visitante:
+// banner en la home + precio tachado y precio con descuento en cada habitación.
+// Si ninguna está vigente, no se muestra nada.
+const PROMOS = [
+  { desde: '09-01', hasta: '12-30', descuento: 20, es: 'Promo Primavera', en: 'Spring Promo' },
+  { desde: '05-01', hasta: '06-30', descuento: 20, es: 'Promo Otoño', en: 'Autumn Promo' }
+];
+
 const I18N = {
   es: {
     meta: {
@@ -47,9 +57,9 @@ const I18N = {
     origin: {
       kicker: 'El origen',
       heading: 'Ricardo Mealla llegó cuando no había nadie.',
-      body1: 'Detrás del Refugio está Ricardo, uno de los iniciadores del turismo en Tilcara. Construyó este lugar con una filosofía clara: integrarse al entorno en vez de imponerse sobre él.',
+      body1: 'Detrás del Refugio está Ricardo Mealla, uno de los pioneros del turismo en la Quebrada de Humahuaca. Restauró este lugar con una filosofía clara: iniciar el turismo cultural integrándose al entorno.',
       body2: 'No buscó convertir el paisaje en producto. Buscó ofrecer un espacio donde el paisaje fuera la experiencia. Esa visión original, cruda y honesta, sigue siendo el alma del lugar décadas después.',
-      quote: 'Empecé cuando acá no había nadie. Creé algo natural, de raíz, sin modificar nada.',
+      quote: 'Empecé cuando acá no había turismo, recuperando y poniendo en valor nuestras raíces.',
       quoteAttrib: 'Ricardo Mealla, anfitrión'
     },
     place: {
@@ -114,7 +124,7 @@ const I18N = {
       },
       family: {
         name: 'Familiar',
-        countLabel: '1 disponible',
+        countLabel: '2 disponibles',
         rate: 'USD 136',
         capacity: 'Hasta 5 personas',
         body: 'Dos espacios intercomunicados: el primero con tres camas twin, el segundo con cama matrimonial. Baño compartido entre ambos. Para familias que necesitan amplitud sin perder intimidad.',
@@ -263,9 +273,9 @@ const I18N = {
     origin: {
       kicker: 'The origin',
       heading: 'Ricardo Mealla arrived when no one else was here.',
-      body1: 'Behind the Refugio is Ricardo, one of the people who started tourism in Tilcara. He built this place with a clear philosophy: blend into the landscape rather than impose on it.',
+      body1: 'Behind the Refugio is Ricardo Mealla, one of the pioneers of tourism in the Quebrada de Humahuaca. He restored this place with a clear philosophy: to start cultural tourism by blending into the landscape.',
       body2: 'He never tried to turn the landscape into a product. He offered a space where the landscape itself was the experience. That raw, honest vision is still the soul of the place, decades later.',
-      quote: 'I started when there was no one else here. I built something natural, from the roots, without changing a thing.',
+      quote: 'I started when there was no tourism here, recovering and giving value to our roots.',
       quoteAttrib: 'Ricardo Mealla, host'
     },
     place: {
@@ -330,7 +340,7 @@ const I18N = {
       },
       family: {
         name: 'Family',
-        countLabel: '1 available',
+        countLabel: '2 available',
         rate: 'USD 136',
         capacity: 'Up to 5 guests',
         body: 'Two connected spaces: the first with three twin beds, the second with a matrimonial bed. A shared bathroom between them. For families who need room without losing intimacy.',
@@ -442,4 +452,5 @@ function i18nGet(lang, path) {
 }
 
 window.I18N = I18N;
+window.PROMOS = PROMOS;
 window.i18nGet = i18nGet;

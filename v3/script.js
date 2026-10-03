@@ -70,6 +70,79 @@
     renderReviews(dict);
     updateWhatsAppLinks(dict);
     syncSoundLabel(lang);
+    applyPromo(lang);
+  }
+
+  // ===== Promociones (config en i18n.js -> PROMOS) =====
+  const MONTHS = {
+    es: ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'],
+    en: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+  };
+
+  function getActivePromo(date) {
+    const d = date || new Date();
+    const md = String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+    return (window.PROMOS || []).find((p) => (
+      p.desde <= p.hasta ? (md >= p.desde && md <= p.hasta) : (md >= p.desde || md <= p.hasta)
+    )) || null;
+  }
+
+  function fmtMD(md, lang) {
+    const [m, d] = md.split('-').map(Number);
+    return lang === 'en' ? MONTHS.en[m - 1] + ' ' + d : d + ' ' + MONTHS.es[m - 1];
+  }
+
+  function parseRate(rate) {
+    const m = String(rate || '').match(/^([^\d]*)([\d.,]+)/);
+    if (!m) return null;
+    return { cur: m[1].trim(), n: parseFloat(m[2].replace(',', '.')) };
+  }
+
+  // HTML del precio con descuento, o null si no hay promo vigente o precio numérico
+  function promoRateHTML(rate, promo) {
+    const r = parseRate(rate);
+    if (!promo || !r || isNaN(r.n)) return null;
+    const nuevo = Math.round(r.n * (1 - promo.descuento / 100));
+    return '<s class="rate-old">' + rate + '</s> <span class="rate-new">' + (r.cur ? r.cur + ' ' : '') + nuevo + '</span>';
+  }
+
+  function applyPromo(lang) {
+    const promo = getActivePromo();
+    const name = promo ? promo[lang] || promo.es : '';
+    const tag = promo ? '−' + promo.descuento + '% · ' + name : '';
+
+    // Banner en la home
+    const banner = document.getElementById('promo');
+    if (banner) {
+      banner.hidden = !promo;
+      if (promo) {
+        document.getElementById('promo-badge').textContent = promo.descuento + '% OFF';
+        document.getElementById('promo-kicker').textContent =
+          name + ' · ' + fmtMD(promo.desde, lang) + ' – ' + fmtMD(promo.hasta, lang);
+      }
+    }
+
+    // Precios y etiqueta en las cards de habitaciones
+    document.querySelectorAll('.room-card').forEach((card) => {
+      const rateEl = card.querySelector('[data-i18n$=".rate"]');
+      if (rateEl) {
+        const base = window.i18nGet(lang, rateEl.getAttribute('data-i18n'));
+        const html = promoRateHTML(base, promo);
+        if (html) rateEl.innerHTML = html; else rateEl.textContent = base;
+      }
+      let badge = card.querySelector('.room-card__promo');
+      if (promo) {
+        if (!badge) {
+          badge = document.createElement('span');
+          badge.className = 'room-card__promo';
+          const fig = card.querySelector('.room-card__figure');
+          if (fig) fig.appendChild(badge);
+        }
+        badge.textContent = tag;
+      } else if (badge) {
+        badge.remove();
+      }
+    });
   }
 
   // ===== Dynamic lists =====
@@ -190,7 +263,7 @@
   function updateWhatsAppLinks(dict) {
     const msg = encodeURIComponent(dict.booking.messageTemplate);
     const href = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + msg;
-    ['hero-cta', 'header-cta', 'booking-cta', 'footer-whatsapp'].forEach((id) => {
+    ['hero-cta', 'header-cta', 'booking-cta', 'promo-cta', 'footer-whatsapp'].forEach((id) => {
       const el = document.getElementById(id);
       if (!el) return;
       el.setAttribute('href', href);
@@ -458,6 +531,13 @@
     setText('room-modal-capacity', room.capacity);
     const rateLabel = window.i18nGet(lang, 'rooms.rateLabel') || '';
     setText('room-modal-rate', room.rate ? room.rate + ' ' + rateLabel : '');
+    const promo = getActivePromo();
+    const promoHTML = promoRateHTML(room.rate, promo);
+    const rateEl = document.getElementById('room-modal-rate');
+    if (promoHTML && rateEl) {
+      rateEl.innerHTML = promoHTML + ' ' + rateLabel +
+        '<span class="rate-promo">−' + promo.descuento + '% · ' + (promo[lang] || promo.es) + '</span>';
+    }
     setText('room-modal-body', room.body);
     setText('room-modal-bath', room.bath);
     setText('room-modal-view', room.view);
@@ -476,7 +556,13 @@
 
     const cta = document.getElementById('room-modal-cta');
     if (cta) {
-      const msg = encodeURIComponent(room.bookingMessage || '');
+      let text = room.bookingMessage || '';
+      if (promo) {
+        text += lang === 'en'
+          ? ' I saw the ' + promo.en + ' (' + promo.descuento + '% off).'
+          : ' Vi la ' + promo.es + ' (' + promo.descuento + '% off).';
+      }
+      const msg = encodeURIComponent(text);
       cta.href = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + msg;
     }
 
