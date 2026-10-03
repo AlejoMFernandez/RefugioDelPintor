@@ -1181,6 +1181,21 @@ strong { font-weight: 600; }
   font-style: italic;
   font-variation-settings: "opsz" 14;
 }
+.site-footer__dev {
+  flex-basis: 100%;
+  text-align: center;
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--line-soft);
+}
+.site-footer__dev a {
+  color: var(--ink-soft);
+  text-decoration: underline;
+  text-decoration-color: var(--line);
+  text-underline-offset: 3px;
+  transition: color var(--t-fast) var(--ease-out-strong);
+}
+.site-footer__dev a:hover { color: var(--terracotta); text-decoration-color: currentColor; }
 
 /* ===== Scroll reveals (subtle for V3 minimal) ===== */
 [data-reveal] {
