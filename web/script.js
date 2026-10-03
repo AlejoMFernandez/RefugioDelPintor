@@ -498,10 +498,10 @@
 
   // ===== Room detail modal =====
   const ROOM_IMAGES = {
-    single: '../img/hbt-single.jpg',
-    double: '../img/hbt-matrimonial.jpg',
-    triple: '../img/hbt-triple.jpg',
-    family: '../img/hacitacion planta alta horizontal.jpeg'
+    single: 'img/hbt-single.jpg',
+    double: 'img/hbt-matrimonial.jpg',
+    triple: 'img/hbt-triple.jpg',
+    family: 'img/hbt-familiar.jpg'
   };
   const ROOM_ALT_KEYS = {
     single: 'alt.roomSingle',
@@ -608,9 +608,9 @@
     const map = L.map(el, {
       scrollWheelZoom: false,
       zoomControl: true,
-      attributionControl: false
+      attributionControl: true
     }).setView([lat, lng], 16);
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; OpenStreetMap' }).addTo(map);
     L.circleMarker([lat, lng], {
       radius: 9,
       fillColor: '#B8542F',
