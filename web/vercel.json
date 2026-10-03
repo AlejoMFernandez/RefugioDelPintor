@@ -1,0 +1,8 @@
+{
+  "redirects": [
+    { "source": "/v3", "destination": "/", "permanent": true },
+    { "source": "/v3/", "destination": "/", "permanent": true },
+    { "source": "/v3/index.html", "destination": "/", "permanent": true },
+    { "source": "/v3/:path*", "destination": "/:path*", "permanent": true }
+  ]
+}
